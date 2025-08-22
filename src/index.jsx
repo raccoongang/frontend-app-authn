@@ -45,7 +45,7 @@ initialize({
   handlers: {
     config: () => {
       mergeConfig({
-        configuration,
+        ...configuration,
         GOOGLE_FONTS: process.env.GOOGLE_FONTS || '',
         CUSTOM_FONTS: process.env.CUSTOM_FONTS || '',
       });
