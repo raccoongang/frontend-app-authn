@@ -18,5 +18,6 @@ Sync:
 
 Added:
 ======
+* add custom fonts loading from rg-branding-plugin (TEA-289)
 * add direct import of openedx-brand overrides (TEA-18)
 * add design tokens support (TEA-18)
