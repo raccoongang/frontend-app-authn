@@ -4,14 +4,16 @@ import 'regenerator-runtime/runtime';
 import React, { StrictMode } from 'react';
 
 import {
-  APP_INIT_ERROR, APP_READY, initialize, mergeConfig, subscribe,
+  APP_CONFIG_INITIALIZED, APP_INIT_ERROR, APP_READY, getConfig, initialize, mergeConfig, subscribe,
 } from '@edx/frontend-platform';
+import { loadExternalScripts } from '@edx/frontend-platform/initialize';
 import { ErrorPage } from '@edx/frontend-platform/react';
 import { createRoot } from 'react-dom/client';
 
 import configuration from './config';
 import messages from './i18n';
 import MainApp from './MainApp';
+import { BrandingFontLoader } from './services';
 
 subscribe(APP_READY, () => {
   const root = createRoot(document.getElementById('root'));
@@ -33,10 +35,20 @@ subscribe(APP_INIT_ERROR, (error) => {
   );
 });
 
+subscribe(APP_CONFIG_INITIALIZED, () => {
+  loadExternalScripts([BrandingFontLoader], {
+    config: getConfig(),
+  });
+});
+
 initialize({
   handlers: {
     config: () => {
-      mergeConfig(configuration);
+      mergeConfig({
+        ...configuration,
+        GOOGLE_FONTS: process.env.GOOGLE_FONTS || '',
+        CUSTOM_FONTS: process.env.CUSTOM_FONTS || '',
+      });
     },
   },
   messages,
