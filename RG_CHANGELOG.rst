@@ -9,6 +9,17 @@ and this project adheres to customized Semantic Versioning e.g.: `teak-rg.1`
 [Unreleased]
 ************
 
+[release/teak-rg.2] - 2025-12-12
+********************************
+
+Added:
+======
+* Add a separate logo for Authn (TEA-310)
+
+Fixed:
+======
+* Custom fonts loading from rg-branding-plugin (TEA-289)
+
 [release/teak-rg.1] - 2025-08-06
 ********************************
 
