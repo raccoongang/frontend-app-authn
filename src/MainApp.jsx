@@ -6,7 +6,7 @@ import { Helmet } from 'react-helmet';
 import { Navigate, Route, Routes } from 'react-router-dom';
 
 import {
-  EmbeddedRegistrationRoute, NotFoundPage, registerIcons, UnAuthOnlyRoute, Zendesk,
+  EmbeddedRegistrationRoute, NotFoundPage, registerIcons, ThemeCookieSync, UnAuthOnlyRoute, Zendesk,
 } from './common-components';
 import configureStore from './data/configureStore';
 import {
@@ -33,6 +33,7 @@ registerIcons();
 
 const MainApp = () => (
   <AppProvider store={configureStore()}>
+    <ThemeCookieSync />
     <Helmet>
       <link rel="shortcut icon" href={getConfig().FAVICON_URL} type="image/x-icon" />
     </Helmet>
