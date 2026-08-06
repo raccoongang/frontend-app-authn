@@ -12,6 +12,7 @@ and this project adheres to customized Semantic Versioning e.g.: `verawood-rg.1`
 Added:
 ======
 * add custom fonts loading from rg-branding-plugin (TEA-289)
+* a separate logo for Authn via ``STUDIO_LOGO_URL``, falling back to ``LOGO_WHITE_URL`` (TEA-310)
 
 Removed:
 ========
