@@ -10,3 +10,4 @@ export { RenderInstitutionButton } from './InstitutionLogistration';
 export { default as FormGroup } from './FormGroup';
 export { default as PasswordField } from './PasswordField';
 export { default as Zendesk } from './Zendesk';
+export { default as ThemeCookieSync } from './ThemeCookieSync';
