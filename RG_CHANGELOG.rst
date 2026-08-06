@@ -13,6 +13,7 @@ Added:
 ======
 * add custom fonts loading from rg-branding-plugin (TEA-289)
 * a separate logo for Authn via ``STUDIO_LOGO_URL``, falling back to ``LOGO_WHITE_URL`` (TEA-310)
+* Sync the active Paragon theme variant from the shared cross-origin ``theme-variant`` cookie (ENG-63)
 
 Removed:
 ========
