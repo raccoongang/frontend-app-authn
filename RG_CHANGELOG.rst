@@ -9,6 +9,10 @@ and this project adheres to customized Semantic Versioning e.g.: `verawood-rg.1`
 [Unreleased]
 ************
 
+Added:
+======
+* add custom fonts loading from rg-branding-plugin (TEA-289)
+
 Removed:
 ========
 * codecov CI action — the fork has no codecov project, so the step failed every run (VERA-6)
